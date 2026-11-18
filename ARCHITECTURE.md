@@ -1,4 +1,4 @@
-# Architecture — AnanimCloudReport
+# Architecture — Cloud Report
 
 [English](#english) · [Português](#português)
 
@@ -15,7 +15,7 @@ flowchart LR
   E --> F[React interface]
   E --> G[Reports and exports: HTML, PDF, Excel, CSV]
   E --> H[AI cost assistant]
-  E --> I[Inventory feed to Ananim NOC]
+  E --> I[Inventory feed to NOC Operation Center]
 ```
 
 ### Provider integration
@@ -54,7 +54,7 @@ flowchart LR
   E --> F[Interface React]
   E --> G[Relatórios e exportações: HTML, PDF, Excel, CSV]
   E --> H[Assistente de custos com IA]
-  E --> I[Inventário para o Ananim NOC]
+  E --> I[Inventário para o NOC Operation Center]
 ```
 
 ### Integração com provedores

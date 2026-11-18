@@ -1,4 +1,4 @@
-# AnanimCloudReport
+# Cloud Report
 
 **Cloud FinOps & Governance** — from the invoice to the resource, from the resource to the decision.
 
@@ -6,13 +6,13 @@
 
 A FinOps, cost and governance platform for cloud environments. It joins billing, inventory, backups, quotas, licensing and operational context to answer *how much each project consumes, which resources drive that cost, what is idle and where to act*.
 
-![AnanimCloudReport — executive cost dashboard (real interface, anonymized data)](overview.png)
+![Cloud Report — executive cost dashboard (real interface, anonymized data)](overview.png)
 
-> **Portfolio of Gustavo Souza.** **About the screenshots:** they are real captures of the production interface (November 2026). Client names, hostnames, IP addresses, users, e-mails and domains were replaced automatically at capture time by fictitious ones (e.g. `CLIENTE ALFA`, `app2.exemplo.com`, `usuario.1`, `10.20.x.x`); financial values are scrambled. Layout, features and workflows are exactly what runs in production.
+> **Portfolio of Gustavo Souza.** **About the screenshots:** they are real captures of the production interface (November 2026). Client names, hostnames, IP addresses, users, e-mails and domains were replaced automatically at capture time by fictitious ones (e.g. `CLIENTE ALFA`, `app2.exemplo.com`, `usuario.1`, `10.20.x.x`); cloud account names and the operator's brand are blurred; financial values are scrambled. Layout, features and workflows are exactly what runs in production.
 
 ## The problem
 
-An invoice shows amounts but does not explain the environment. Data is spread across accounts, projects, servers, disks, backups and quotas, which makes manual analysis slow and inconsistent. AnanimCloudReport puts it in one view with account, project and period filters, and turns it into alerts, savings and reports.
+An invoice shows amounts but does not explain the environment. Data is spread across accounts, projects, servers, disks, backups and quotas, which makes manual analysis slow and inconsistent. Cloud Report puts it in one view with account, project and period filters, and turns it into alerts, savings and reports.
 
 ## At a glance
 
@@ -31,7 +31,7 @@ An invoice shows amounts but does not explain the environment. Data is spread ac
 
 ## White-label and SaaS-ready
 
-AnanimCloudReport was built to be **white-label**. Brand name, logo, colors, report letterhead, tenant list, cloud accounts and integrations are configuration — not hard-coded. The same platform can be:
+Cloud Report was built to be **white-label**. Brand name, logo, colors, report letterhead, tenant list, cloud accounts and integrations are configuration — not hard-coded. The same platform can be:
 
 - **deployed for any company** — an MSP, a cloud reseller, a managed-services provider or an internal IT team;
 - **run single-tenant** (one company, on its own infrastructure) or **multi-tenant**, with every tenant isolated by scope validated in the backend;
@@ -201,7 +201,7 @@ flowchart LR
   E --> F[React interface]
   E --> G[Reports and exports: HTML, PDF, Excel, CSV]
   E --> H[AI cost assistant]
-  E --> I[Inventory feed to Ananim NOC]
+  E --> I[Inventory feed to NOC Operation Center]
 ```
 
 **Stack:** React · TypeScript · Vite · Tailwind CSS · Node.js · Express · cloud provider APIs · JSON persistence · LLM API for the assistant.
@@ -233,8 +233,8 @@ The source code is kept in a private repository. This repository is a portfolio:
 
 ## Related projects
 
-- [Ananim NOC](https://github.com/gsouzacloud/ananim-noc-portfolio) — operations, correlation, users & security
-- [AnanimCloudReport](https://github.com/gsouzacloud/ananim-cloud-report-portfolio) — cloud FinOps & governance
-- [Ananim Shield](https://github.com/gsouzacloud/ananim-application-shield-portfolio) — WAF & application security
+- [NOC Operation Center](https://github.com/gsouzacloud/noc-operation-center-portfolio) — operations, correlation, users & security
+- [Cloud Report](https://github.com/gsouzacloud/cloud-report-portfolio) — cloud FinOps & governance
+- [Shield](https://github.com/gsouzacloud/shield-portfolio) — WAF & application security
 
 [Gustavo Souza on GitHub](https://github.com/gsouzacloud) · Documentation updated November 18, 2026.
