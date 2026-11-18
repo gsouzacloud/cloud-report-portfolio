@@ -3,7 +3,7 @@
 **Cloud FinOps & Governance**  
 Da fatura ao recurso. Do recurso à decisão.
 
-Plataforma de custos e governança para ambientes Huawei Cloud. Reúne faturamento, inventário e contexto operacional para responder quanto cada projeto consome, quais recursos sustentam esse custo e onde há oportunidades de revisão.
+Plataforma de FinOps, custos e governança para ambientes de provedores de cloud em geral. Reúne faturamento, inventário e contexto operacional para responder quanto cada projeto consome, quais recursos sustentam esse custo e onde há oportunidades de revisão.
 
 ![Visão demonstrativa de AnanimCloudReport, com dados fictícios](overview.png)
 
@@ -26,11 +26,30 @@ A relação abaixo foi preparada a partir dos módulos e registros técnicos do 
 | Operação e automação | Integrações com agendamentos de infraestrutura e painéis de governança. | Analisar janelas de funcionamento e apoiar operações controladas. |
 | Relatórios e integração | Relatórios executivos, exportações e intercâmbio de inventário com o Ananim NOC. | Transformar dados técnicos em material utilizável por operação e gestão. |
 
+## FinOps: conectar consumo, custo e responsabilidade
+
+O CloudReport aproxima as equipes de tecnologia, operação e gestão financeira. A análise parte do custo e chega ao recurso, ao projeto e à necessidade de negócio que sustenta aquele consumo.
+
+| Frente de FinOps | Como o projeto contribui |
+|---|---|
+| Visibilidade de custos | Consolida gastos e compara períodos para explicar a evolução do consumo. |
+| Alocação e responsabilidade | Organiza a análise por conta e projeto, apoiando a identificação dos responsáveis pelo custo. |
+| Investigação de variações | Relaciona alterações na fatura ao inventário e ao contexto operacional. |
+| Otimização de uso | Oferece dados de capacidade, recursos e agenda para revisar dimensionamento e horários de funcionamento. |
+| Governança financeira | Apoia revisões recorrentes e relatórios compartilhados entre áreas técnicas e gestão. |
+| Comunicação de valor | Apresenta custos junto à criticidade e à finalidade do ambiente, evitando decisões baseadas apenas no menor preço. |
+
+Orçamentos, previsão de gastos, alertas de desvio, recomendações automáticas de rightsizing e regras ampliadas de showback/chargeback são caminhos de evolução descritos no roadmap. O portfólio diferencia a base de análise existente dessas automações futuras.
+
+## Provedores de cloud
+
+A proposta do produto não fica restrita a uma marca: pode ser adaptada a diferentes provedores por meio de conectores para faturamento, inventário e operação. Cada integração precisa tratar seu modelo de contas, projetos, regiões, serviços, moeda e cobrança. A integração documentada nesta versão é Huawei Cloud; incluir outro provedor exige implementar e validar seu conector.
+
 ## Como funciona
 
 ```mermaid
 flowchart LR
-  A[APIs Huawei Cloud] --> B[Coleta no backend]
+  A[APIs de provedores cloud] --> B[Coleta no backend]
   B --> C[Normalização por conta e projeto]
   C --> D[Cache e histórico JSON]
   D --> E[API Express]
@@ -39,7 +58,7 @@ flowchart LR
   E --> H[Inventário para Ananim NOC]
 ```
 
-**Stack:** React · TypeScript · Vite · Tailwind CSS · Node.js · Express · APIs Huawei Cloud · JSON.
+**Stack:** React · TypeScript · Vite · Tailwind CSS · Node.js · Express · APIs de provedores cloud · JSON.
 
 Veja as decisões e os limites da arquitetura em [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -61,7 +80,7 @@ As propostas de [ROADMAP.md](ROADMAP.md) estão separadas dos recursos existente
 
 ## Limites importantes
 
-- O recorte implementado é Huawei Cloud; não é anunciado como plataforma multicloud pronta.
+- A proposta atende provedores de cloud em geral por meio de integrações específicas. A cobertura depende do conector e dos dados disponibilizados por cada provedor; a integração evidenciada nesta versão é Huawei Cloud.
 - Estimativas e oportunidades não equivalem a economia realizada ou garantida.
 - Inventário, cobrança e estado operacional podem ter instantes de atualização diferentes.
 - Relatórios não substituem validação da fatura, contrato de licenciamento ou teste de restauração.
@@ -74,7 +93,7 @@ O código-fonte é mantido em repositório privado. Não existe autorização de
 
 ## English overview
 
-A Huawei Cloud cost and governance platform that connects billing, infrastructure inventory, backups and operational context. The project demonstrates API integration, FinOps workflows and executive reporting. Additional cloud providers and advanced optimization workflows are evolution proposals, not delivered capabilities.
+A provider-extensible cloud FinOps and governance platform connecting billing, infrastructure inventory, backups and operational context. It supports cost visibility, allocation analysis, usage reviews and reporting for engineering and business teams. Provider coverage depends on available connectors; Huawei Cloud is the integration evidenced in this version. Additional connectors and automated optimization remain extension opportunities.
 
 ## Projetos relacionados
 
